@@ -84,9 +84,9 @@ public class ColorConverter {
         double Y = 1 - b;
 
         System.out.println("RGB naar CMY:");
-        System.out.println("C:\t"+C);
-        System.out.println("M:\t"+M);
-        System.out.println("Y:\t"+Y);
+        System.out.println("C:\t"+C+"\tafgerond: "+String.format("%.2f",C));
+        System.out.println("M:\t"+M+"\tafgerond: "+String.format("%.2f",M));
+        System.out.println("Y:\t"+Y+"\tafgerond: "+String.format("%.2f",Y));
     }
 
     public void CMYtoRGB(double C,double M,double Y) throws Exception{
@@ -182,13 +182,13 @@ public class ColorConverter {
         double g2 = R2/255.0;
         double b2 = R2/255.0;
 
-        Double R = (alpha1 * r1) + ((1.0-alpha1)*r2);
-        Double G = (alpha1 * g1) + ((1.0-alpha1)*g2);
-        Double B = (alpha1 * b1) + ((1.0-alpha1)*r2);
+        Double R = ((alpha1 * r1) + ((1.0-alpha1)*r2))*255;
+        Double G = ((alpha1 * g1) + ((1.0-alpha1)*g2))*255;
+        Double B = ((alpha1 * b1) + ((1.0-alpha1)*r2))*255;
 
-        System.out.println("Eind kleur:");
-        System.out.println("R:\t"+R);
-        System.out.println("G:\t"+G);
-        System.out.println("B:\t"+B);
+        System.out.println("Eind kleur tranparantie:");
+        System.out.println("R:\t"+R+"\tafgerond: "+String.format("%.0f",R));
+        System.out.println("G:\t"+G+"\tafgerond: "+String.format("%.0f",G));
+        System.out.println("B:\t"+B+"\tafgerond: "+String.format("%.0f",B));
     }
 }
