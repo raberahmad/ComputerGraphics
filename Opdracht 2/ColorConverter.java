@@ -179,8 +179,8 @@ public class ColorConverter {
         double b1 = B1/255.0;
 
         double r2 = R2/255.0;
-        double g2 = R2/255.0;
-        double b2 = R2/255.0;
+        double g2 = G2/255.0;
+        double b2 = B2/255.0;
 
         Double R = ((alpha1 * r1) + ((1.0-alpha1)*r2))*255;
         Double G = ((alpha1 * g1) + ((1.0-alpha1)*g2))*255;
