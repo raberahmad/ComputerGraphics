@@ -22,7 +22,6 @@ class Grid:
             x = round(x)
             y = round(y)
             self.points.append((x, y, c))
-        
     def display(self):
         glClear(GL_COLOR_BUFFER_BIT) 
         for i in self.points:
